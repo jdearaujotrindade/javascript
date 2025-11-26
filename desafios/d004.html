@@ -23,8 +23,8 @@
             var produto = window.prompt('Que produto você está comprando?')
             var preco = window.prompt(`Quanto custa ${produto} que você está comprando?`)
             var dinheiro = window.prompt(`Qual foi o valor que você deu para pagar ${produto}?`)
-            window.prompt(`Você comprou ${produto} que custou R$ ${preco},00.
-Deu R$ ${dinheiro},00 em dinheiro e vai receber R$ ${Number(dinheiro) - Number(preco)},00 de troco.
+            window.alert(`Você comprou ${produto} que custou ${Number(preco).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}.
+Deu ${Number(dinheiro).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})} em dinheiro e vai receber ${(Number(dinheiro) - Number(preco)).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})} de troco.
 Volte Sempre!`)
         }
     </script>
