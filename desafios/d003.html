@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 3</title>
+    <style>
+        h1 {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        button {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1em;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Antes e Depois</h1>
+    <button onclick="mostrar()">Antecessor e Sucessor</button>
+    <script>
+        function mostrar() {
+            var tnum = window.prompt('Digite um número inteiro qualquer')
+            var num = Number(tnum)
+            window.alert(`Antes de ${num}, temos o número ${num - 1}.
+Depois de ${num}, temos o número ${num + 1}`)
+        }
+    </script>
+</body>
+</html>
