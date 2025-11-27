@@ -23,9 +23,7 @@
     <div>Clique no botão acima para iniciar.</div>
     <script>
         function converter() {
-            var numdistancia = Number(window.prompt('Digite uma distância em metros (m)'))
-            var txtdistancia = numdistancia.toLocaleString('pt-BR')
-            var distancia = Number(txtdistancia)
+            var distancia = Number(window.prompt('Digite uma distância em metros (m)'))
             window.document.querySelector('div').innerHTML = `<h2>A distância de ${distancia} metros, corresponde a...</h2>
             <p>${distancia / 1000} quilômetros (Km)</p>
             <p>${distancia / 100} hectômetros (Hm)</p>
