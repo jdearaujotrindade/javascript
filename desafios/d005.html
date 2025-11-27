@@ -25,12 +25,12 @@
         function converter() {
             var distancia = Number(window.prompt('Digite uma distância em metros (m)'))
             window.document.querySelector('div').innerHTML = `<h2>A distância de ${distancia} metros, corresponde a...</h2>
-            <p>${distancia / 1000} quilômetros (Km)</p>
-            <p>${distancia / 100} hectômetros (Hm)</p>
-            <p>${distancia / 10} decâmetros (Dam)</p>
-            <p>${distancia * 10} decímetros (dm)</p>
-            <p>${distancia * 100} centímetros (cm)</p>
-            <p>${distancia * 1000} milímetros (mm)</p>`
+            <p>${(distancia / 1000).toLocaleString('pt-BR')} quilômetros (Km)</p>
+            <p>${(distancia / 100).toLocaleString('pt-BR')} hectômetros (Hm)</p>
+            <p>${(distancia / 10).toLocaleString('pt-BR')} decâmetros (Dam)</p>
+            <p>${(distancia * 10).toLocaleString('pt-BR')} decímetros (dm)</p>
+            <p>${(distancia * 100).toLocaleString('pt-BR')} centímetros (cm)</p>
+            <p>${(distancia * 1000).toLocaleString('pt-BR')} milímetros (mm)</p>`
         }
     </script>
 </body>

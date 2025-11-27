@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 8</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        input {
+            font-size: 1em;
+            padding: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calcular Desconto</h1>
+    <input type="button" value="Desconto de 10%" onclick="calcular()">
+    <div id="res">
+        <p>Clique no botão acima para iniciar.</p>
+    </div>
+    <script>
+        function calcular() {
+            var nome = window.prompt('Qual o produto que você está comprando?')
+            var preco = window.prompt(`Qual é o preço de ${nome}?`)
+            preco = Number(preco)
+            var des = preco * 10 / 100
+            var pag = preco - des
+            var res = window.document.querySelector('div#res')
+            res.innerHTML = `
+            <h2>Calculando desconto de 10% para ${nome}...</h2>
+            <p>O preço original era ${preco}.</p>
+            <p>Você acaba de ganhar ${des.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})} de desconto (-10%).</p>
+            <p>No fim, você vai pagar ${pag.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})} no produto ${nome}.</p>`
+        }
+    </script>
+</body>
+</html>
