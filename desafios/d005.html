@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!-- Dúvida -->
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -23,14 +23,16 @@
     <div>Clique no botão acima para iniciar.</div>
     <script>
         function converter() {
-            var distancia = Number(window.prompt('Digite uma distância em metros (m)'))
+            var numdistancia = Number(window.prompt('Digite uma distância em metros (m)'))
+            var txtdistancia = numdistancia.toLocaleString('pt-BR')
+            var distancia = Number(txtdistancia)
             window.document.querySelector('div').innerHTML = `<h2>A distância de ${distancia} metros, corresponde a...</h2>
-            <p>${(distancia / 1000).toFixed(3).replace('.', ',')} quilômetros (Km)</p>
-            <p>${(distancia / 100).toFixed(3).replace('.', ',')} hectômetros (Hm)</p>
-            <p>${(distancia / 10).toFixed(3).replace('.', ',')} decâmetros (Dam)</p>
-            <p>${(distancia * 10).toFixed(2).replace('.', ',')} decímetros (dm)</p>
-            <p>${(distancia * 100).toFixed(2).replace('.', ',')} centímetros (cm)</p>
-            <p>${(distancia * 1000).toFixed(2).replace('.', ',')} milímetros (mm)</p>`
+            <p>${distancia / 1000} quilômetros (Km)</p>
+            <p>${distancia / 100} hectômetros (Hm)</p>
+            <p>${distancia / 10} decâmetros (Dam)</p>
+            <p>${distancia * 10} decímetros (dm)</p>
+            <p>${distancia * 100} centímetros (cm)</p>
+            <p>${distancia * 1000} milímetros (mm)</p>`
         }
     </script>
 </body>
