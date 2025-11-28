@@ -1,0 +1,24 @@
+body {
+    font: normal 1em Arial;
+    background-color: dodgerblue;
+}
+header {
+    color: white;
+    text-align: center;
+    margin: 32px;
+}
+section {
+    background-color: white;
+    border-radius: 16px;
+    height: 500px;
+    width: 500px;
+    padding: 16px;
+    margin: auto;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+}
+footer {
+    font-style: italic;
+    color: white;
+    text-align: center;
+    margin: 32px;
+}
